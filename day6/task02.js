@@ -10,9 +10,13 @@ class ubarTrip{
         this.perKmChargesInRS = perKmChargesInRS;
         this.totalPricetoPay = totalPricetoPay=totalDistanceInKM*perKmChargesInRS;
     }
+    getTripRecipt(){
+        return `Hi Dear Valuable Customer Mr/Ms.${this.custName} Welcome to UBER,\nYour Journey From ${this.pickupPoint} to ${this.dropPoint}.\nTotal Distance is ${this.totalDistanceInKM}KM and per KM Chargers is Just Rs.${this.perKmChargesInRS}/-.\nTotal Amount to pay just Rs.${this.totalPricetoPay}/- only. \nThank you`;
+    }
 }
 
 let tripDetailes = new ubarTrip("xyz","chennai","bangaluru",343,5);
-
+let charges = tripDetailes.totalPricetoPay
 console.log(tripDetailes);
-console.log(tripDetailes.totalPricetoPay);
+
+console.log(tripDetailes.getTripRecipt());
